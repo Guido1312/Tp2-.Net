@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Data.Database
 {
-    class PersonasAdapter : Adapter
+    public class PersonasAdapter : Adapter
     {
         public List<Personas> GetAll()
         {

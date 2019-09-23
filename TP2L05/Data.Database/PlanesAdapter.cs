@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Data.Database
 {
-    class PlanesAdapter:Adapter
+    public class PlanesAdapter:Adapter
     {
         public List<Planes> GetAll()
         {

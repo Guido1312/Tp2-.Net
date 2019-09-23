@@ -24,7 +24,7 @@ namespace Business.Logic
             UsuarioAdapter usuario = new UsuarioAdapter();
             return usuario.GetAll();
         }
-
+        
         public Usuario GetOne(int Id)
         {
             UsuarioAdapter usuario = new UsuarioAdapter();
