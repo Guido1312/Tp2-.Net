@@ -8,7 +8,7 @@ namespace Business.Entities
 {
     public class Curso : BusinessEntity
     {
-        // esto no es un comentario
+        // esto no es un comentariooooooooo
         int _aniocalendario, _cupo, _idcomision, _idmateria;
         string _descripcion;
 
