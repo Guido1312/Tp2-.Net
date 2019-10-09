@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Business.Entities;
 using Data.Database;
 
+//esto es un control
 namespace Business.Logic
 {
     public class CursoLogic:BusinessLogic
