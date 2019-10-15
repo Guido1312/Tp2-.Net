@@ -134,7 +134,7 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdSave = new SqlCommand("insert into especialidades(desc_especilidad)" +
-                    "values(@@desc_especilidad) " +
+                    "values(@desc_especilidad)" +
                     "select @@identity", sqlConn);
 
                 cmdSave.Parameters.Add("@desc_especialidad", SqlDbType.VarChar, 50).Value = especialidad.Descripcion;

@@ -41,7 +41,7 @@
             this.lb_Opciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lb_Opciones.Location = new System.Drawing.Point(0, 0);
             this.lb_Opciones.Name = "lb_Opciones";
-            this.lb_Opciones.Size = new System.Drawing.Size(78, 13);
+            this.lb_Opciones.Size = new System.Drawing.Size(101, 17);
             this.lb_Opciones.TabIndex = 0;
             this.lb_Opciones.Text = "Opciones ABM";
             this.lb_Opciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -51,7 +51,7 @@
             this.rb_Uuarios.AutoSize = true;
             this.rb_Uuarios.Location = new System.Drawing.Point(15, 26);
             this.rb_Uuarios.Name = "rb_Uuarios";
-            this.rb_Uuarios.Size = new System.Drawing.Size(66, 17);
+            this.rb_Uuarios.Size = new System.Drawing.Size(85, 21);
             this.rb_Uuarios.TabIndex = 1;
             this.rb_Uuarios.Text = "Usuarios";
             this.rb_Uuarios.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@
             this.rb_Personas.AutoSize = true;
             this.rb_Personas.Location = new System.Drawing.Point(15, 50);
             this.rb_Personas.Name = "rb_Personas";
-            this.rb_Personas.Size = new System.Drawing.Size(69, 17);
+            this.rb_Personas.Size = new System.Drawing.Size(89, 21);
             this.rb_Personas.TabIndex = 3;
             this.rb_Personas.Text = "Personas";
             this.rb_Personas.UseVisualStyleBackColor = true;
@@ -81,7 +81,7 @@
             this.rb_Planes.AutoSize = true;
             this.rb_Planes.Location = new System.Drawing.Point(15, 74);
             this.rb_Planes.Name = "rb_Planes";
-            this.rb_Planes.Size = new System.Drawing.Size(57, 17);
+            this.rb_Planes.Size = new System.Drawing.Size(72, 21);
             this.rb_Planes.TabIndex = 4;
             this.rb_Planes.Text = "Planes";
             this.rb_Planes.UseVisualStyleBackColor = true;

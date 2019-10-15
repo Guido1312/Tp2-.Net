@@ -43,6 +43,7 @@ namespace UI.Desktop
         MessageBoxIcon icono)
         {
             this.Notificar(this.Text, mensaje, botones, icono);
-        }
+        }
+
     }
 }
