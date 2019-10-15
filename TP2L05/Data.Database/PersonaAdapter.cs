@@ -8,11 +8,11 @@ using System.Data.SqlClient;
 
 namespace Data.Database
 {
-    class PersonasAdapter : Adapter
+    public class PersonaAdapter : Adapter
     {
-        public List<Personas> GetAll()
+        public List<Persona> GetAll()
         {
-            List<Personas> personas = new List<Personas>();
+            List<Persona> personas = new List<Persona>();
             try
             {
                 this.OpenConnection();
@@ -20,7 +20,7 @@ namespace Data.Database
                 SqlDataReader drPersonas = cmdPersonas.ExecuteReader();
                 while (drPersonas.Read())
                 {
-                    Personas per = new Personas();
+                    Persona per = new Persona();
                     per.ID = (int)drPersonas["id_persona"];
                     per.Nombre = (string)drPersonas["nombre"];
                     per.Apellido = (string)drPersonas["apellido"];
@@ -48,9 +48,9 @@ namespace Data.Database
             return personas;
         }
 
-        public Business.Entities.Personas GetOne(int ID)
+        public Business.Entities.Persona GetOne(int ID)
         {
-            Personas per = new Personas();
+            Persona per = new Persona();
             try
             {
                 this.OpenConnection();
@@ -105,7 +105,7 @@ namespace Data.Database
             }
         }
 
-        public void Save(Personas persona)
+        public void Save(Persona persona)
         {
             if (persona.State == BusinessEntity.States.Deleted)
             {
@@ -122,21 +122,29 @@ namespace Data.Database
             persona.State = BusinessEntity.States.Unmodified;
         }
 
-        protected void Update(Personas persona)
+        protected void Update(Persona persona)
         {
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdSave = new SqlCommand("UPDATE personas SET desc_plan=@desc_plan, id_especialidad=@id_especialidad", sqlConn);
+                SqlCommand cmdSave = new SqlCommand("UPDATE personas SET nombre=@nombre, apellido=@apellido, direccion=@dirrecion, email=@email, telefono=@telefono" +
+                    "fecha_nac=@fecha_nac, legajo=@legajo, tipo_persona=@tipo_persona, id_plan=@id_plan", sqlConn);
 
-                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = plan.ID;
-                cmdSave.Parameters.Add("@desc_plan", SqlDbType.VarChar, 50).Value = plan.Descripcion;
-                cmdSave.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = plan.IDEspecialidad;
+                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = persona.ID;
+                cmdSave.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = persona.Nombre;
+                cmdSave.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = persona.Apellido;
+                cmdSave.Parameters.Add("@direccion", SqlDbType.VarChar, 50).Value = persona.Direccion;
+                cmdSave.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = persona.Email;
+                cmdSave.Parameters.Add("@telefono", SqlDbType.VarChar, 50).Value = persona.Telefono;
+                cmdSave.Parameters.Add("@fecha_nac", SqlDbType.DateTime).Value = persona.FechaNacimiento;
+                cmdSave.Parameters.Add("@legajo", SqlDbType.Int).Value = persona.Legajo;
+                cmdSave.Parameters.Add("@tipo_persona", SqlDbType.Int).Value = persona.TipoPersonas;
+                cmdSave.Parameters.Add("@id_plan", SqlDbType.Int).Value = persona.IDPlan;
                 cmdSave.ExecuteNonQuery();
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al modificar datos del plan", Ex);
+                Exception ExcepcionManejada = new Exception("Error al modificar datos de la persona", Ex);
                 throw ExcepcionManejada;
             }
             finally
@@ -145,22 +153,29 @@ namespace Data.Database
             }
         }
 
-        protected void Insert(Planes plan)
+        protected void Insert(Persona persona)
         {
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdSave = new SqlCommand("insert into planes(desc_plan,id_especialidad)" +
-                    "values(@desc_plan,@id_especialidad)" +
+                SqlCommand cmdSave = new SqlCommand("insert into personas(nombre, apellido, direccion, email, telefono, fecha_nac, leagjo, tipo_persona, id_plan)" +
+                    "values(@nombre,@apellido,@direccion,@email,@telefono,@fecha_nac,@legajo,@tipo_persona,@id_plan)" +
                     "select @@identity", sqlConn);
 
-                cmdSave.Parameters.Add("@desc_plan", SqlDbType.VarChar, 50).Value = plan.Descripcion;
-                cmdSave.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = plan.IDEspecialidad;
-                plan.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
+                cmdSave.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = persona.Nombre;
+                cmdSave.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = persona.Apellido;
+                cmdSave.Parameters.Add("@direccion", SqlDbType.VarChar, 50).Value = persona.Direccion;
+                cmdSave.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = persona.Email;
+                cmdSave.Parameters.Add("@telefono", SqlDbType.VarChar, 50).Value = persona.Telefono;
+                cmdSave.Parameters.Add("@fecha_nac", SqlDbType.DateTime).Value = persona.FechaNacimiento;
+                cmdSave.Parameters.Add("@legajo", SqlDbType.Int).Value = persona.Legajo;
+                cmdSave.Parameters.Add("@tipo_persona", SqlDbType.Int).Value = persona.TipoPersonas;
+                cmdSave.Parameters.Add("@id_plan", SqlDbType.Int).Value = persona.IDPlan;
+                persona.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al crear plan", Ex);
+                Exception ExcepcionManejada = new Exception("Error al cargar a la persona", Ex);
                 throw ExcepcionManejada;
             }
             finally

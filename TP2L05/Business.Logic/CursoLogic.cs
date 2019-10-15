@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Business.Entities;
 using Data.Database;
 
-//esto es un control
 namespace Business.Logic
 {
     public class CursoLogic:BusinessLogic
@@ -25,7 +24,7 @@ namespace Business.Logic
             return curso.GetAll();
         }
 
-        public Especialidad GetOne(int Id)
+        public Curso GetOne(int Id)
         {
             CursoAdapter curso = new CursoAdapter();
             return curso.GetOne(Id);
@@ -37,7 +36,7 @@ namespace Business.Logic
             curso.Delete(Id);
         }
 
-        public void Save(Especialidad especialidad)
+        public void Save(Curso curso)
         {
             CursoAdapter cur = new CursoAdapter();
             cur.Save(curso);

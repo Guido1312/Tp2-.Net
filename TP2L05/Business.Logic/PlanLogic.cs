@@ -10,9 +10,9 @@ namespace Business.Logic
 {
     public class PlanLogic : BusinessLogic
     {
-        Data.Database.PlanesAdapter _planData;
+        Data.Database.PlanAdapter _planData;
 
-        public Data.Database.PlanesAdapter PlanData
+        public Data.Database.PlanAdapter PlanData
         {
             get { return _planData; }
             set { _planData = value; }
@@ -20,19 +20,19 @@ namespace Business.Logic
 
         public List<Plan> GetAll()
         {
-            PlanesAdapter usuario = new PlanAdapter();
+            PlanAdapter plan = new PlanAdapter();
             return plan.GetAll();
         }
 
-        public Planes GetOne(int Id)
+        public Plan GetOne(int Id)
         {
-            PlanesAdapter usuario = new PlanesAdapter();
+            PlanAdapter plan = new PlanAdapter();
             return plan.GetOne(Id);
         }
 
         public void Delete(int Id)
         {
-            PlanesAdapter plan = new PlanesAdapter();
+            PlanAdapter plan = new PlanAdapter();
             plan.Delete(Id);
         }
 

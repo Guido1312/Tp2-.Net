@@ -8,11 +8,11 @@ using System.Data.SqlClient;
 
 namespace Data.Database
 {
-    class PlanesAdapter:Adapter
+    public class PlanAdapter:Adapter
     {
-        public List<Planes> GetAll()
+        public List<Plan> GetAll()
         {
-            List<Planes> planes = new List<Planes>();
+            List<Plan> planes = new List<Plan>();
             try
             {
                 this.OpenConnection();
@@ -20,7 +20,7 @@ namespace Data.Database
                 SqlDataReader drPlanes = cmdPlanes.ExecuteReader();
                 while (drPlanes.Read())
                 {
-                    Planes pla = new Planes();
+                    Plan pla = new Plan();
                     pla.ID = (int)drPlanes["id_plan"];
                     pla.Descripcion = (string)drPlanes["desc_plan"];
                     pla.IDEspecialidad = (int)drPlanes["id_especialidad"];
@@ -41,9 +41,9 @@ namespace Data.Database
             return planes;
         }
 
-        public Business.Entities.Planes GetOne(int ID)
+        public Business.Entities.Plan GetOne(int ID)
         {
-            Planes pla = new Planes();
+            Plan pla = new Plan();
             try
             {
                 this.OpenConnection();
@@ -91,7 +91,7 @@ namespace Data.Database
             }
         }
 
-        public void Save(Planes plan)
+        public void Save(Plan plan)
         {
             if (plan.State == BusinessEntity.States.Deleted)
             {
@@ -108,7 +108,7 @@ namespace Data.Database
             plan.State = BusinessEntity.States.Unmodified;
         }
 
-        protected void Update(Planes plan)
+        protected void Update(Plan plan)
         {
             try
             {
@@ -131,7 +131,7 @@ namespace Data.Database
             }
         }
 
-        protected void Insert(Planes plan)
+        protected void Insert(Plan plan)
         {
             try
             {
