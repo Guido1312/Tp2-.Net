@@ -32,11 +32,11 @@
             this.tcEspecialidades = new System.Windows.Forms.ToolStripContainer();
             this.tlEspecialidades = new System.Windows.Forms.TableLayoutPanel();
             this.dvgEspecialidades = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsEspecialidades = new System.Windows.Forms.ToolStrip();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnBorrar = new System.Windows.Forms.ToolStripButton();
@@ -54,11 +54,11 @@
             // tcEspecialidades.ContentPanel
             // 
             this.tcEspecialidades.ContentPanel.Controls.Add(this.tlEspecialidades);
-            this.tcEspecialidades.ContentPanel.Size = new System.Drawing.Size(800, 423);
+            this.tcEspecialidades.ContentPanel.Size = new System.Drawing.Size(650, 423);
             this.tcEspecialidades.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcEspecialidades.Location = new System.Drawing.Point(0, 0);
             this.tcEspecialidades.Name = "tcEspecialidades";
-            this.tcEspecialidades.Size = new System.Drawing.Size(800, 450);
+            this.tcEspecialidades.Size = new System.Drawing.Size(650, 450);
             this.tcEspecialidades.TabIndex = 0;
             this.tcEspecialidades.Text = "toolStripContainer1";
             // 
@@ -80,13 +80,14 @@
             this.tlEspecialidades.RowCount = 2;
             this.tlEspecialidades.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlEspecialidades.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlEspecialidades.Size = new System.Drawing.Size(800, 423);
+            this.tlEspecialidades.Size = new System.Drawing.Size(650, 423);
             this.tlEspecialidades.TabIndex = 0;
             // 
             // dvgEspecialidades
             // 
             this.dvgEspecialidades.AllowUserToAddRows = false;
             this.dvgEspecialidades.AllowUserToDeleteRows = false;
+            this.dvgEspecialidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgEspecialidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgEspecialidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -97,8 +98,22 @@
             this.dvgEspecialidades.Name = "dvgEspecialidades";
             this.dvgEspecialidades.ReadOnly = true;
             this.dvgEspecialidades.RowTemplate.Height = 24;
-            this.dvgEspecialidades.Size = new System.Drawing.Size(794, 388);
+            this.dvgEspecialidades.Size = new System.Drawing.Size(644, 388);
             this.dvgEspecialidades.TabIndex = 0;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "ID";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.DataPropertyName = "Descripcion";
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
             // 
             // btnActualizar
             // 
@@ -112,7 +127,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(722, 397);
+            this.btnSalir.Location = new System.Drawing.Point(572, 397);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 2;
@@ -130,22 +145,8 @@
             this.btnBorrar});
             this.tsEspecialidades.Location = new System.Drawing.Point(3, 0);
             this.tsEspecialidades.Name = "tsEspecialidades";
-            this.tsEspecialidades.Size = new System.Drawing.Size(123, 27);
+            this.tsEspecialidades.Size = new System.Drawing.Size(84, 27);
             this.tsEspecialidades.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "ID";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.DataPropertyName = "Descripcion";
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
             // 
             // tsbNuevo
             // 
@@ -184,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(650, 450);
             this.Controls.Add(this.tcEspecialidades);
             this.Name = "Especialidad";
             this.Text = "Especialidad";

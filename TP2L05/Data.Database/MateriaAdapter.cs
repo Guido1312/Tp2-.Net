@@ -16,7 +16,7 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdMaterias = new SqlCommand("select * from personas", sqlConn);
+                SqlCommand cmdMaterias = new SqlCommand("select * from materias", sqlConn);
                 SqlDataReader drMaterias = cmdMaterias.ExecuteReader();
                 while (drMaterias.Read())
                 {
@@ -118,13 +118,15 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdSave = new SqlCommand("UPDATE materias SET desc_materia=@desc_materia, hs_semanales=@hs_semanales," +
-                    "hs_totales=@hs_totales, id_plan=@id_plan", sqlConn);
+                    "hs_totales=@hs_totales, id_plan=@id_plan "+
+                    "WHERE id_materia = @id", sqlConn);
 
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = materia.ID;
                 cmdSave.Parameters.Add("@desc_materia", SqlDbType.VarChar, 50).Value = materia.Descripcion;
                 cmdSave.Parameters.Add("@hs_semanales", SqlDbType.VarChar, 50).Value = materia.HSSemanales;
                 cmdSave.Parameters.Add("@hs_totales", SqlDbType.VarChar, 50).Value = materia.HSTotales;
                 cmdSave.Parameters.Add("@id_plan", SqlDbType.VarChar, 50).Value = materia.IDPlan;
+                cmdSave.ExecuteNonQuery();
             }
             catch (Exception Ex)
             {

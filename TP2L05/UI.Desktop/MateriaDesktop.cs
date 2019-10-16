@@ -12,34 +12,36 @@ using Business.Logic;
 
 namespace UI.Desktop
 {
-    public partial class PlanDesktop : ApplicationForm
+    public partial class MateriaDesktop : ApplicationForm
     {
-        public PlanDesktop()
+        public MateriaDesktop()
         {
             InitializeComponent();
         }
 
-        public Business.Entities.Plan PlanActual { get; set; }
+        public Business.Entities.Materia MateriaActual { get; set; }
 
-        public PlanDesktop(ModoForm modo) : this()
+        public MateriaDesktop(ModoForm modo) : this()
         {
             this.Modo = modo;
         }
 
 
-        public PlanDesktop(int ID, ModoForm modo) : this()
+        public MateriaDesktop(int ID, ModoForm modo) : this()
         {
             this.Modo = modo;
-            PlanLogic plan = new PlanLogic();
-            this.PlanActual = plan.GetOne(ID);
+            MateriaLogic mate = new MateriaLogic();
+            this.MateriaActual = mate.GetOne(ID);
             MapearDeDatos();
         }
 
         public override void MapearDeDatos()
         {
-            this.txtID.Text = this.PlanActual.ID.ToString();
-            this.txtDescripcion.Text= this.PlanActual.Descripcion;
-            this.txt_idEspecialidad.Text = this.PlanActual.IDEspecialidad.ToString();
+            this.txtID.Text = this.MateriaActual.ID.ToString();
+            this.txtDescripcion.Text= this.MateriaActual.Descripcion;
+            this.txtHsSemanales.Text = this.MateriaActual.HSSemanales.ToString();
+            this.txtHsTotales.Text = this.MateriaActual.HSTotales.ToString();
+            this.txt_idPlan.Text = this.MateriaActual.IDPlan.ToString();
 
             if (this.Modo == ModoForm.Baja)
             {
@@ -65,9 +67,9 @@ namespace UI.Desktop
 
                 if (this.Modo == ModoForm.Alta)
                 {
-                    Business.Entities.Plan plan = new Business.Entities.Plan();
-                    this.PlanActual = plan;
-                    this.PlanActual.State = BusinessEntity.States.New;                 
+                    Business.Entities.Materia mate = new Business.Entities.Materia();
+                    this.MateriaActual = mate;
+                    this.MateriaActual.State = BusinessEntity.States.New;
                 }
                 else
                 {
@@ -77,20 +79,22 @@ namespace UI.Desktop
                     //    MessageBox.Show("Debe ingrear un int");
                     //}
                     //Convert.ToInt32("1244");
-                    this.PlanActual.ID = int.Parse(this.txtID.Text);
-                    this.PlanActual.State = BusinessEntity.States.Modified;
+                    this.MateriaActual.ID = int.Parse(this.txtID.Text);
+                    this.MateriaActual.State = BusinessEntity.States.Modified;
                 }
 
-                this.PlanActual.Descripcion = this.txtDescripcion.Text;
-                this.PlanActual.IDEspecialidad = int.Parse(this.txt_idEspecialidad.Text);
+                this.MateriaActual.Descripcion = this.txtDescripcion.Text;
+                this.MateriaActual.HSSemanales = int.Parse(this.txtHsSemanales.Text);
+                this.MateriaActual.HSTotales = int.Parse(this.txtHsTotales.Text);
+                this.MateriaActual.IDPlan = int.Parse(this.txt_idPlan.Text);
             }
             if (this.Modo == ModoForm.Consulta)
             {
-                this.PlanActual.State = BusinessEntity.States.Unmodified;
+                this.MateriaActual.State = BusinessEntity.States.Unmodified;
             }
             else if (this.Modo == ModoForm.Baja)
             {
-                this.PlanActual.State = BusinessEntity.States.Deleted;
+                this.MateriaActual.State = BusinessEntity.States.Deleted;
 
             }
         }
@@ -98,8 +102,8 @@ namespace UI.Desktop
         public override void GuardarCambios()
         {
             MapearADatos();
-            PlanLogic plan = new PlanLogic();
-            plan.Save(this.PlanActual);
+            MateriaLogic mate = new MateriaLogic();
+            mate.Save(this.MateriaActual);
         }
 
         public override bool Validar()
@@ -111,9 +115,21 @@ namespace UI.Desktop
                 return false;
             }
 
-            if (string.IsNullOrEmpty(this.txt_idEspecialidad.Text))
+            if (string.IsNullOrEmpty(this.txtHsSemanales.Text))
             {
-                Notificar("ERROR!", "Debe ingresar el ID de la especialidad", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Notificar("ERROR!", "Debe ingresar la cantidad de horas semanales", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(this.txtHsTotales.Text))
+            {
+                Notificar("ERROR!", "Debe ingresar la cantidad de horas totales", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(this.txt_idPlan.Text))
+            {
+                Notificar("ERROR!", "Debe ingresar el ID del plan", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

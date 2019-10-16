@@ -55,11 +55,11 @@
             // tcPlanes.ContentPanel
             // 
             this.tcPlanes.ContentPanel.Controls.Add(this.tlPlanes);
-            this.tcPlanes.ContentPanel.Size = new System.Drawing.Size(800, 423);
+            this.tcPlanes.ContentPanel.Size = new System.Drawing.Size(720, 423);
             this.tcPlanes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcPlanes.Location = new System.Drawing.Point(0, 0);
             this.tcPlanes.Name = "tcPlanes";
-            this.tcPlanes.Size = new System.Drawing.Size(800, 450);
+            this.tcPlanes.Size = new System.Drawing.Size(720, 450);
             this.tcPlanes.TabIndex = 0;
             this.tcPlanes.Text = "toolStripContainer1";
             // 
@@ -81,13 +81,14 @@
             this.tlPlanes.RowCount = 2;
             this.tlPlanes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlPlanes.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlPlanes.Size = new System.Drawing.Size(800, 423);
+            this.tlPlanes.Size = new System.Drawing.Size(720, 423);
             this.tlPlanes.TabIndex = 0;
             // 
             // dvgPlanes
             // 
             this.dvgPlanes.AllowUserToAddRows = false;
             this.dvgPlanes.AllowUserToDeleteRows = false;
+            this.dvgPlanes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgPlanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgPlanes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -99,7 +100,7 @@
             this.dvgPlanes.Name = "dvgPlanes";
             this.dvgPlanes.ReadOnly = true;
             this.dvgPlanes.RowTemplate.Height = 24;
-            this.dvgPlanes.Size = new System.Drawing.Size(794, 388);
+            this.dvgPlanes.Size = new System.Drawing.Size(714, 388);
             this.dvgPlanes.TabIndex = 0;
             // 
             // btnActualizar
@@ -114,7 +115,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(722, 397);
+            this.btnSalir.Location = new System.Drawing.Point(642, 397);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 2;
@@ -184,7 +185,7 @@
             // 
             // id_Especialidad
             // 
-            this.id_Especialidad.DataPropertyName = "id_especialidad";
+            this.id_Especialidad.DataPropertyName = "IDEspecialidad";
             this.id_Especialidad.HeaderText = "Especialidad";
             this.id_Especialidad.Name = "id_Especialidad";
             this.id_Especialidad.ReadOnly = true;
@@ -193,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(720, 450);
             this.Controls.Add(this.tcPlanes);
             this.Name = "Plan";
             this.Text = "Planes";

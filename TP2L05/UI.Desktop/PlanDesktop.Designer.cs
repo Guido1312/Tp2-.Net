@@ -31,12 +31,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lId = new System.Windows.Forms.Label();
             this.lDescripcion = new System.Windows.Forms.Label();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.bntCancelar = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.bntCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.lid_Esp = new System.Windows.Forms.Label();
-            this.tb_idEspecialidad = new System.Windows.Forms.TextBox();
+            this.txt_idEspecialidad = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@
             this.tableLayoutPanel1.Controls.Add(this.bntCancelar, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.lid_Esp, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tb_idEspecialidad, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txt_idEspecialidad, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -83,26 +83,6 @@
             this.lDescripcion.TabIndex = 1;
             this.lDescripcion.Text = "Descripcion";
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Location = new System.Drawing.Point(3, 384);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 2;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // bntCancelar
-            // 
-            this.bntCancelar.Location = new System.Drawing.Point(196, 384);
-            this.bntCancelar.Name = "bntCancelar";
-            this.bntCancelar.Size = new System.Drawing.Size(75, 23);
-            this.bntCancelar.TabIndex = 3;
-            this.bntCancelar.Text = "Cancelar";
-            this.bntCancelar.UseVisualStyleBackColor = true;
-            this.bntCancelar.Click += new System.EventHandler(this.bntCancelar_Click);
-            // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(196, 3);
@@ -120,6 +100,26 @@
             this.txtDescripcion.TabIndex = 5;
             this.txtDescripcion.Text = "";
             // 
+            // bntCancelar
+            // 
+            this.bntCancelar.Location = new System.Drawing.Point(196, 384);
+            this.bntCancelar.Name = "bntCancelar";
+            this.bntCancelar.Size = new System.Drawing.Size(75, 23);
+            this.bntCancelar.TabIndex = 3;
+            this.bntCancelar.Text = "Cancelar";
+            this.bntCancelar.UseVisualStyleBackColor = true;
+            this.bntCancelar.Click += new System.EventHandler(this.bntCancelar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(3, 384);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 2;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
             // lid_Esp
             // 
             this.lid_Esp.AutoSize = true;
@@ -129,12 +129,12 @@
             this.lid_Esp.TabIndex = 6;
             this.lid_Esp.Text = "id Especialidad";
             // 
-            // tb_idEspecialidad
+            // txt_idEspecialidad
             // 
-            this.tb_idEspecialidad.Location = new System.Drawing.Point(196, 354);
-            this.tb_idEspecialidad.Name = "tb_idEspecialidad";
-            this.tb_idEspecialidad.Size = new System.Drawing.Size(260, 22);
-            this.tb_idEspecialidad.TabIndex = 7;
+            this.txt_idEspecialidad.Location = new System.Drawing.Point(196, 354);
+            this.txt_idEspecialidad.Name = "txt_idEspecialidad";
+            this.txt_idEspecialidad.Size = new System.Drawing.Size(260, 22);
+            this.txt_idEspecialidad.TabIndex = 7;
             // 
             // PlanDesktop
             // 
@@ -160,6 +160,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.Label lid_Esp;
-        private System.Windows.Forms.TextBox tb_idEspecialidad;
+        private System.Windows.Forms.TextBox txt_idEspecialidad;
     }
 }

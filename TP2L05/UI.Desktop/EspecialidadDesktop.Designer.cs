@@ -45,10 +45,10 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.Controls.Add(this.lId, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lDescripcion, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.bntCancelar, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtDescripcion, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -80,6 +80,7 @@
             // 
             // btnAceptar
             // 
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAceptar.Location = new System.Drawing.Point(3, 352);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
@@ -90,7 +91,8 @@
             // 
             // bntCancelar
             // 
-            this.bntCancelar.Location = new System.Drawing.Point(197, 352);
+            this.bntCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bntCancelar.Location = new System.Drawing.Point(407, 352);
             this.bntCancelar.Name = "bntCancelar";
             this.bntCancelar.Size = new System.Drawing.Size(75, 23);
             this.bntCancelar.TabIndex = 3;

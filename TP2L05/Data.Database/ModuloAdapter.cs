@@ -111,7 +111,9 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdSave = new SqlCommand("UPDATE modulos SET desc_modulo=@desc_modulo ", sqlConn);
+                SqlCommand cmdSave = new SqlCommand("UPDATE modulos SET desc_modulo=@desc_modulo " +
+                                "WHERE id_modulo=@id", sqlConn);
+
 
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = modulo.ID;
                 cmdSave.Parameters.Add("@desc_modulo", SqlDbType.VarChar, 50).Value = modulo.Descripcion;

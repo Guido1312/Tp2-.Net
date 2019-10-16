@@ -58,13 +58,13 @@
             // tcUsuarios.ContentPanel
             // 
             this.tcUsuarios.ContentPanel.Controls.Add(this.tlUsuarios);
-            this.tcUsuarios.ContentPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tcUsuarios.ContentPanel.Size = new System.Drawing.Size(543, 512);
+            this.tcUsuarios.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.tcUsuarios.ContentPanel.Size = new System.Drawing.Size(991, 497);
             this.tcUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.tcUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tcUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.tcUsuarios.Name = "tcUsuarios";
-            this.tcUsuarios.Size = new System.Drawing.Size(543, 539);
+            this.tcUsuarios.Size = new System.Drawing.Size(991, 524);
             this.tcUsuarios.TabIndex = 0;
             this.tcUsuarios.Text = "toolStripContainer1";
             // 
@@ -82,18 +82,19 @@
             this.tlUsuarios.Controls.Add(this.btnSalir, 1, 1);
             this.tlUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.tlUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.tlUsuarios.Name = "tlUsuarios";
             this.tlUsuarios.RowCount = 2;
             this.tlUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlUsuarios.Size = new System.Drawing.Size(543, 512);
+            this.tlUsuarios.Size = new System.Drawing.Size(991, 497);
             this.tlUsuarios.TabIndex = 0;
             // 
             // dgvUsuarios
             // 
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -105,10 +106,10 @@
             this.tlUsuarios.SetColumnSpan(this.dgvUsuarios, 2);
             this.dgvUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUsuarios.Location = new System.Drawing.Point(4, 4);
-            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
-            this.dgvUsuarios.Size = new System.Drawing.Size(535, 468);
+            this.dgvUsuarios.Size = new System.Drawing.Size(983, 453);
             this.dgvUsuarios.TabIndex = 0;
             // 
             // id
@@ -156,8 +157,8 @@
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(331, 480);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizar.Location = new System.Drawing.Point(779, 465);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(100, 28);
             this.btnActualizar.TabIndex = 1;
@@ -167,8 +168,8 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(439, 480);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Location = new System.Drawing.Point(887, 465);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 28);
             this.btnSalir.TabIndex = 2;
@@ -186,7 +187,7 @@
             this.tsbEliminar});
             this.tsUsuarios.Location = new System.Drawing.Point(3, 0);
             this.tsUsuarios.Name = "tsUsuarios";
-            this.tsUsuarios.Size = new System.Drawing.Size(123, 27);
+            this.tsUsuarios.Size = new System.Drawing.Size(84, 27);
             this.tsUsuarios.TabIndex = 0;
             // 
             // tsbNuevo
@@ -226,9 +227,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 539);
+            this.ClientSize = new System.Drawing.Size(991, 524);
             this.Controls.Add(this.tcUsuarios);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Usuarios";
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);
