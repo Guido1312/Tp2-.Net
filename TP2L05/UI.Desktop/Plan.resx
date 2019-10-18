@@ -133,7 +133,7 @@
   <data name="tsbNuevo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAFOQSURBVHhe7b0J3K7VvP+/j1nSrEEDqSRNhmSM0iBSGlSk
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAFOQSURBVHhe7b0J3K7VvP+/j1nSrEEDqSRNhmSM0iBSGlSk
         0aHMhAYkZPqFzBEKkQYJKRQJyUHzPKCUqUMDkQxx/v/Pe+fOs3dr7/3svZ/nuta67vf79Xqfl7N7hvu5
         7+taa11rfYcZIlIF/zXBe8zmfeMK8VFxs7hT3DvuH98VPxaPiSfHM+LZ8cJ4VfxlvDHe8m//GP8W/7/Z
         5N/4b6Ov43v4Xn4GP4ufyc/md3w+Hh7fGfeLL447Rl4br3H5yGue/e+Y+DeKiIiMBaOJ/Z7/9l7xPnHp
@@ -496,7 +496,7 @@
   <data name="btnEditar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAGSoSURBVHhe7b0LsGzpVd+nPt2nz+Pe8YyEZ0YjoRFIowfD
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAGSoSURBVHhe7b0LsGzpVd+nPt2nz+Pe8YyEZ0YjoRFIowfD
         Rb6pg8NJoaRlrFOM4RBsqo7jAE6FQWCecnBICvMmFWKnynZBOYCxcCpIM07GnovvxQ8pwUk55hFLpjA4
         Fli8gjUjBMYOGIXHyGictXbvb5/97f3tvdfq/va319f9/1f96957dvfvnl5rdf9Xn9Pd+yUQBEEQlJFm
         5IfIryffKv/kf/PXocSafcu3fMuBM/97/eWNBd52Am87gbedwNtO4LV1g/y55L9Kfj/5BfK/C5i//v7Z
@@ -932,7 +932,7 @@
   <data name="btnBorrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAKeQSURBVHhe7b0HuCVVlfbPPadPuKmbvrehmwa6kWwDLSO2
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAKeQSURBVHhe7b0HuCVVlfbPPadPuKmbvrehmwa6kWwDLSO2
         XLXnjxgAlQETOiYMY5gx46cg5vRhmDFgTjjqmBOgBLNjdgQDOIZRzAFQx0ym+f7v2n2qqDq1q2qvqlVV
         u85Z7/O8z+2+dep31tprV+11T6jaRaVSqVQqlaqIZp773Od2AtP/d/66sJRXTsorJ+WVk/LKSXnlpLy6
         dNJJJ3XHPdpUSMpTHkfKUx5HylMeR9PG42jmqKOOWnXEEUf0AtP/6fc7N7OlPOVxpDzlcaQ85XE0bTyW

@@ -32,15 +32,15 @@
             this.tcPlanes = new System.Windows.Forms.ToolStripContainer();
             this.tlPlanes = new System.Windows.Forms.TableLayoutPanel();
             this.dvgPlanes = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsPlanes = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnBorrar = new System.Windows.Forms.ToolStripButton();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcPlanes.ContentPanel.SuspendLayout();
             this.tcPlanes.TopToolStripPanel.SuspendLayout();
             this.tcPlanes.SuspendLayout();
@@ -55,11 +55,13 @@
             // tcPlanes.ContentPanel
             // 
             this.tcPlanes.ContentPanel.Controls.Add(this.tlPlanes);
-            this.tcPlanes.ContentPanel.Size = new System.Drawing.Size(720, 423);
+            this.tcPlanes.ContentPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcPlanes.ContentPanel.Size = new System.Drawing.Size(523, 367);
             this.tcPlanes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcPlanes.Location = new System.Drawing.Point(0, 0);
+            this.tcPlanes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tcPlanes.Name = "tcPlanes";
-            this.tcPlanes.Size = new System.Drawing.Size(720, 450);
+            this.tcPlanes.Size = new System.Drawing.Size(523, 394);
             this.tcPlanes.TabIndex = 0;
             this.tcPlanes.Text = "toolStripContainer1";
             // 
@@ -77,11 +79,12 @@
             this.tlPlanes.Controls.Add(this.btnSalir, 1, 1);
             this.tlPlanes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlPlanes.Location = new System.Drawing.Point(0, 0);
+            this.tlPlanes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tlPlanes.Name = "tlPlanes";
             this.tlPlanes.RowCount = 2;
             this.tlPlanes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlPlanes.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlPlanes.Size = new System.Drawing.Size(720, 423);
+            this.tlPlanes.Size = new System.Drawing.Size(523, 367);
             this.tlPlanes.TabIndex = 0;
             // 
             // dvgPlanes
@@ -96,18 +99,41 @@
             this.id_Especialidad});
             this.tlPlanes.SetColumnSpan(this.dvgPlanes, 2);
             this.dvgPlanes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dvgPlanes.Location = new System.Drawing.Point(3, 3);
+            this.dvgPlanes.Location = new System.Drawing.Point(2, 2);
+            this.dvgPlanes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dvgPlanes.Name = "dvgPlanes";
             this.dvgPlanes.ReadOnly = true;
             this.dvgPlanes.RowTemplate.Height = 24;
-            this.dvgPlanes.Size = new System.Drawing.Size(714, 388);
+            this.dvgPlanes.Size = new System.Drawing.Size(519, 340);
             this.dvgPlanes.TabIndex = 0;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "ID";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.DataPropertyName = "Descripcion";
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // id_Especialidad
+            // 
+            this.id_Especialidad.DataPropertyName = "IDEspecialidad";
+            this.id_Especialidad.HeaderText = "Especialidad";
+            this.id_Especialidad.Name = "id_Especialidad";
+            this.id_Especialidad.ReadOnly = true;
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(3, 397);
+            this.btnActualizar.Location = new System.Drawing.Point(2, 346);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(91, 23);
+            this.btnActualizar.Size = new System.Drawing.Size(68, 19);
             this.btnActualizar.TabIndex = 1;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
@@ -115,9 +141,10 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(642, 397);
+            this.btnSalir.Location = new System.Drawing.Point(465, 346);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(56, 19);
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -169,33 +196,13 @@
             this.btnBorrar.ToolTipText = "Borrar";
             this.btnBorrar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "ID";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.DataPropertyName = "Descripcion";
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // id_Especialidad
-            // 
-            this.id_Especialidad.DataPropertyName = "IDEspecialidad";
-            this.id_Especialidad.HeaderText = "Especialidad";
-            this.id_Especialidad.Name = "id_Especialidad";
-            this.id_Especialidad.ReadOnly = true;
-            // 
             // Plan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 450);
+            this.ClientSize = new System.Drawing.Size(523, 394);
             this.Controls.Add(this.tcPlanes);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Plan";
             this.Text = "Planes";
             this.Load += new System.EventHandler(this.Plan_Load);

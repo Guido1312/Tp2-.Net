@@ -133,7 +133,5 @@ namespace UI.Desktop
         {
             Close();
         }
-
-
     }
 }
