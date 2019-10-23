@@ -28,84 +28,88 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lb_Opciones = new System.Windows.Forms.Label();
-            this.rb_Uuarios = new System.Windows.Forms.RadioButton();
-            this.btn_Aceptar = new System.Windows.Forms.Button();
-            this.rb_Personas = new System.Windows.Forms.RadioButton();
-            this.rb_Planes = new System.Windows.Forms.RadioButton();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Usuarios = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lb_Opciones
+            // tableLayoutPanel1
             // 
-            this.lb_Opciones.AutoSize = true;
-            this.lb_Opciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lb_Opciones.Location = new System.Drawing.Point(0, 0);
-            this.lb_Opciones.Name = "lb_Opciones";
-            this.lb_Opciones.Size = new System.Drawing.Size(101, 17);
-            this.lb_Opciones.TabIndex = 0;
-            this.lb_Opciones.Text = "Opciones ABM";
-            this.lb_Opciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.button3, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Usuarios, 1, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(501, 386);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // rb_Uuarios
+            // Usuarios
             // 
-            this.rb_Uuarios.AutoSize = true;
-            this.rb_Uuarios.Location = new System.Drawing.Point(15, 26);
-            this.rb_Uuarios.Name = "rb_Uuarios";
-            this.rb_Uuarios.Size = new System.Drawing.Size(85, 21);
-            this.rb_Uuarios.TabIndex = 1;
-            this.rb_Uuarios.Text = "Usuarios";
-            this.rb_Uuarios.UseVisualStyleBackColor = true;
+            this.Usuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Usuarios.BackColor = System.Drawing.Color.PaleGreen;
+            this.Usuarios.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Usuarios.Location = new System.Drawing.Point(136, 91);
+            this.Usuarios.Name = "Usuarios";
+            this.Usuarios.Size = new System.Drawing.Size(227, 49);
+            this.Usuarios.TabIndex = 0;
+            this.Usuarios.Text = "Usuarios";
+            this.Usuarios.UseVisualStyleBackColor = false;
             // 
-            // btn_Aceptar
+            // button2
             // 
-            this.btn_Aceptar.Location = new System.Drawing.Point(121, 131);
-            this.btn_Aceptar.Name = "btn_Aceptar";
-            this.btn_Aceptar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Aceptar.TabIndex = 2;
-            this.btn_Aceptar.Text = "Aceptar";
-            this.btn_Aceptar.UseVisualStyleBackColor = true;
-            this.btn_Aceptar.Click += new System.EventHandler(this.btn_Aceptar_Click);
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.Color.PaleGreen;
+            this.button2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(136, 168);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(227, 49);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Planes";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // rb_Personas
+            // button3
             // 
-            this.rb_Personas.AutoSize = true;
-            this.rb_Personas.Location = new System.Drawing.Point(15, 50);
-            this.rb_Personas.Name = "rb_Personas";
-            this.rb_Personas.Size = new System.Drawing.Size(89, 21);
-            this.rb_Personas.TabIndex = 3;
-            this.rb_Personas.Text = "Personas";
-            this.rb_Personas.UseVisualStyleBackColor = true;
-            // 
-            // rb_Planes
-            // 
-            this.rb_Planes.AutoSize = true;
-            this.rb_Planes.Location = new System.Drawing.Point(15, 74);
-            this.rb_Planes.Name = "rb_Planes";
-            this.rb_Planes.Size = new System.Drawing.Size(72, 21);
-            this.rb_Planes.TabIndex = 4;
-            this.rb_Planes.Text = "Planes";
-            this.rb_Planes.UseVisualStyleBackColor = true;
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.Color.PaleGreen;
+            this.button3.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(136, 245);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(227, 49);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Especialidades";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // Menu
             // 
-            this.ClientSize = new System.Drawing.Size(208, 166);
-            this.Controls.Add(this.rb_Planes);
-            this.Controls.Add(this.rb_Personas);
-            this.Controls.Add(this.btn_Aceptar);
-            this.Controls.Add(this.rb_Uuarios);
-            this.Controls.Add(this.lb_Opciones);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(501, 386);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximizeBox = false;
             this.Name = "Menu";
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lb_Opciones;
-        private System.Windows.Forms.RadioButton rb_Uuarios;
-        private System.Windows.Forms.Button btn_Aceptar;
-        private System.Windows.Forms.RadioButton rb_Personas;
-        private System.Windows.Forms.RadioButton rb_Planes;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Usuarios;
     }
 }

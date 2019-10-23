@@ -17,6 +17,13 @@ namespace UI.Desktop
         public PlanDesktop()
         {
             InitializeComponent();
+            EspecialidadLogic e = new EspecialidadLogic();
+
+            List<Business.Entities.Especialidad> espes = e.GetAll();
+            foreach (Business.Entities.Especialidad es in espes)
+            {
+                cbIdEspecialidad.Items.Add(es.ID);
+            }
         }
 
         public Business.Entities.Plan PlanActual { get; set; }
@@ -39,7 +46,7 @@ namespace UI.Desktop
         {
             this.txtID.Text = this.PlanActual.ID.ToString();
             this.txtDescripcion.Text= this.PlanActual.Descripcion;
-            this.txt_idEspecialidad.Text = this.PlanActual.IDEspecialidad.ToString();
+            //this.txt_idEspecialidad.Text = this.PlanActual.IDEspecialidad.ToString();
 
             if (this.Modo == ModoForm.Baja)
             {
@@ -82,7 +89,7 @@ namespace UI.Desktop
                 }
 
                 this.PlanActual.Descripcion = this.txtDescripcion.Text;
-                this.PlanActual.IDEspecialidad = int.Parse(this.txt_idEspecialidad.Text);
+                this.PlanActual.IDEspecialidad = ((int)cbIdEspecialidad.SelectedItem);
             }
             if (this.Modo == ModoForm.Consulta)
             {
@@ -111,9 +118,9 @@ namespace UI.Desktop
                 return false;
             }
 
-            if (string.IsNullOrEmpty(this.txt_idEspecialidad.Text))
+            if (string.IsNullOrEmpty(this.cbIdEspecialidad.Text))
             {
-                Notificar("ERROR!", "Debe ingresar el ID de la especialidad", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Notificar("ERROR!", "Debe seleccionar el ID de la especialidad", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

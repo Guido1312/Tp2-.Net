@@ -17,6 +17,14 @@ namespace UI.Desktop
         public MateriaDesktop()
         {
             InitializeComponent();
+
+            PlanLogic p = new PlanLogic();
+
+            List<Business.Entities.Plan> planes = p.GetAll();
+            foreach (Business.Entities.Plan pl in planes)
+            {
+                cbIdPlan.Items.Add(pl.ID);
+            }
         }
 
         public Business.Entities.Materia MateriaActual { get; set; }
@@ -41,7 +49,7 @@ namespace UI.Desktop
             this.txtDescripcion.Text= this.MateriaActual.Descripcion;
             this.txtHsSemanales.Text = this.MateriaActual.HSSemanales.ToString();
             this.txtHsTotales.Text = this.MateriaActual.HSTotales.ToString();
-            this.txt_idPlan.Text = this.MateriaActual.IDPlan.ToString();
+            //this.cbIdPlan.Text = this.MateriaActual.IDPlan.ToString();
 
             if (this.Modo == ModoForm.Baja)
             {
@@ -86,7 +94,7 @@ namespace UI.Desktop
                 this.MateriaActual.Descripcion = this.txtDescripcion.Text;
                 this.MateriaActual.HSSemanales = int.Parse(this.txtHsSemanales.Text);
                 this.MateriaActual.HSTotales = int.Parse(this.txtHsTotales.Text);
-                this.MateriaActual.IDPlan = int.Parse(this.txt_idPlan.Text);
+                this.MateriaActual.IDPlan = ((int)cbIdPlan.SelectedItem);
             }
             if (this.Modo == ModoForm.Consulta)
             {
@@ -127,7 +135,7 @@ namespace UI.Desktop
                 return false;
             }
 
-            if (string.IsNullOrEmpty(this.txt_idPlan.Text))
+            if (string.IsNullOrEmpty(this.cbIdPlan.Text))
             {
                 Notificar("ERROR!", "Debe ingresar el ID del plan", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
